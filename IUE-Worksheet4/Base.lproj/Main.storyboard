@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="IUE_Worksheet4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="ss5-gq-KNn">
+                                <rect key="frame" x="82" y="603" width="250" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Sn-tK-7Qj" customClass="CustomButtom" customModule="IUE_Worksheet4" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="Qjd-x5-A1w"/>
+                                            <constraint firstAttribute="width" secondItem="3Sn-tK-7Qj" secondAttribute="height" id="Yyv-LE-soi"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                <color key="value" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="plusButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PuB-KZ-v4l"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GgX-Kn-z9K" customClass="CustomButtom" customModule="IUE_Worksheet4" customModuleProvider="target">
+                                        <rect key="frame" x="150" y="0.0" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="GgX-Kn-z9K" secondAttribute="height" id="PfN-kO-wmf"/>
+                                            <constraint firstAttribute="width" constant="100" id="Tho-vX-ZTj"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                <color key="value" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isAddButton" value="NO"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="minusButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dJo-eg-wBP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FBj-lw-WCi" customClass="CounterView" customModule="IUE_Worksheet4" customModuleProvider="target">
+                                <rect key="frame" x="92" y="273" width="230" height="230"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcv-Mb-vhV">
+                                        <rect key="frame" x="93" y="55.5" width="44.5" height="119.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                        <color key="textColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="fcv-Mb-vhV" firstAttribute="centerX" secondItem="FBj-lw-WCi" secondAttribute="centerX" id="Lam-ld-6wh"/>
+                                    <constraint firstAttribute="width" constant="230" id="XET-eJ-iOc"/>
+                                    <constraint firstAttribute="width" secondItem="FBj-lw-WCi" secondAttribute="height" id="uYd-P6-R5u"/>
+                                    <constraint firstItem="fcv-Mb-vhV" firstAttribute="centerY" secondItem="FBj-lw-WCi" secondAttribute="centerY" id="xyx-k4-JmD"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="currentNumber">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maxNumber">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="smw-YN-kha">
+                                <rect key="frame" x="107" y="129" width="200" height="30"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="5WH-DM-lXM"/>
+                                </constraints>
+                                <state key="normal" title="Sliding Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ss5-gq-KNn" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="DP4-q9-3HS"/>
+                            <constraint firstItem="FBj-lw-WCi" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="DdW-v1-1ou"/>
+                            <constraint firstItem="smw-YN-kha" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="MW2-7H-lhY"/>
+                            <constraint firstItem="ss5-gq-KNn" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="200" id="b0w-uz-eZR"/>
+                            <constraint firstItem="ss5-gq-KNn" firstAttribute="top" secondItem="FBj-lw-WCi" secondAttribute="bottom" constant="100" id="dfa-ge-NoV"/>
+                            <constraint firstItem="smw-YN-kha" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="85" id="uy3-ia-snn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="counterLabel" destination="fcv-Mb-vhV" id="0k0-cm-rci"/>
+                        <outlet property="counterView" destination="FBj-lw-WCi" id="ymI-1U-M3J"/>
+                        <outlet property="minusButton" destination="GgX-Kn-z9K" id="VqR-HX-UUW"/>
+                        <outlet property="plusButton" destination="3Sn-tK-7Qj" id="IeG-Wg-bs7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="139"/>
+        </scene>
+    </scenes>
+</document>
